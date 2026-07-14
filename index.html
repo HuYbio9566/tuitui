@@ -832,8 +832,8 @@
 
     .home-workbench {
       display: grid;
-      grid-template-columns: minmax(0, 1fr) 360px;
-      gap: 16px;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      gap: 18px;
       align-items: start;
       margin-bottom: 16px;
     }
@@ -842,32 +842,40 @@
       min-width: 0;
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 12px;
     }
 
     .home-ai-window {
-      min-height: 284px;
-      padding: 24px 28px 22px;
+      min-height: 410px;
+      padding: 34px 36px 30px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
-      gap: 18px;
-      border-color: rgba(47, 107, 219, 0.14);
-      background: linear-gradient(180deg, #FFFFFF 0%, #FBFDFF 100%);
+      gap: 24px;
+      border-color: rgba(47, 107, 219, 0.24);
+      background: #F9FBFF;
+      box-shadow: 0 1px 2px rgba(31, 35, 41, 0.03), 0 18px 42px rgba(47, 107, 219, 0.08);
     }
 
     .home-ai-copy {
-      max-width: 840px;
+      max-width: 720px;
       display: flex;
       flex-direction: column;
       gap: 8px;
     }
 
+    .home-ai-eyebrow {
+      color: var(--fs-primary);
+      font-size: 13px;
+      line-height: 20px;
+      font-weight: 600;
+    }
+
     .home-ai-window h2 {
       margin: 0;
       color: var(--fs-text-title);
-      font-size: 26px;
-      line-height: 34px;
+      font-size: 30px;
+      line-height: 40px;
       font-weight: 700;
       letter-spacing: 0;
     }
@@ -880,23 +888,23 @@
     }
 
     .home-ai-compose {
-      min-height: 64px;
+      min-height: 76px;
       display: grid;
-      grid-template-columns: auto minmax(0, 1fr) 48px;
+      grid-template-columns: auto minmax(0, 1fr) 56px;
       align-items: center;
       gap: 8px;
-      padding: 8px;
-      border: 1px solid var(--fs-divider);
+      padding: 10px;
+      border: 1px solid rgba(47, 107, 219, 0.28);
       border-radius: var(--fs-radius-xl);
       background: #FFFFFF;
-      box-shadow: var(--fs-shadow-sm);
+      box-shadow: 0 10px 26px rgba(47, 107, 219, 0.10);
       cursor: pointer;
       transition: border-color var(--fs-motion-fast) var(--fs-ease-out), box-shadow var(--fs-motion-fast) var(--fs-ease-out);
     }
 
     .home-ai-input {
       min-width: 0;
-      min-height: 40px;
+      min-height: 48px;
       display: flex;
       align-items: center;
       border: 0;
@@ -913,7 +921,7 @@
 
     .home-ai-scope {
       width: 100%;
-      height: 40px;
+      height: 48px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -993,8 +1001,8 @@
     }
 
     .home-ai-send {
-      width: 40px;
-      height: 40px;
+      width: 48px;
+      height: 48px;
       display: inline-grid;
       place-items: center;
       border: 0;
@@ -1022,21 +1030,21 @@
     }
 
     .trust-brief {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 8px;
-      margin-top: -6px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 6px 18px;
+      margin-top: -10px;
     }
 
     .trust-brief-item {
-      min-height: 54px;
+      min-height: 32px;
       display: flex;
       align-items: center;
-      gap: 10px;
-      padding: 10px 12px;
-      border: 1px solid var(--fs-divider);
-      border-radius: var(--fs-radius-lg);
-      background: #FFFFFF;
+      gap: 6px;
+      padding: 0;
+      border: 0;
+      background: transparent;
       color: inherit;
       font: inherit;
       text-align: left;
@@ -1044,32 +1052,58 @@
 
     .trust-brief-item strong {
       display: block;
-      font-size: 13px;
-      line-height: 20px;
-    }
-
-    .trust-brief-item span:last-child {
-      display: block;
       color: var(--fs-text-secondary);
       font-size: 12px;
-      line-height: 18px;
+      line-height: 20px;
+      font-weight: 500;
+    }
+
+    .trust-brief-item > span:last-child {
+      display: block;
+    }
+
+    .trust-brief-item > span:last-child > span {
+      display: none;
+    }
+
+    .trust-brief-item .tile-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: var(--fs-radius-md);
+    }
+
+    .trust-brief-item .tile-icon .icon {
+      width: 14px;
+      height: 14px;
     }
 
     .home-action-list {
-      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      padding: 6px;
       overflow: hidden;
+      box-shadow: none;
+    }
+
+    .home-action-label {
+      grid-column: 1 / -1;
+      padding: 6px 10px 4px;
+      color: var(--fs-text-tertiary);
+      font-size: 12px;
+      line-height: 18px;
+      font-weight: 500;
     }
 
     .home-action-row {
       width: 100%;
-      min-height: 78px;
+      min-height: 68px;
       display: grid;
-      grid-template-columns: 44px minmax(0, 1fr) auto;
+      grid-template-columns: 32px minmax(0, 1fr);
       align-items: center;
-      gap: 14px;
-      padding: 16px 18px;
+      gap: 10px;
+      padding: 10px 12px;
       border: 0;
-      border-bottom: 1px solid var(--fs-divider);
+      border-right: 1px solid var(--fs-divider);
       background: #FFFFFF;
       color: inherit;
       font: inherit;
@@ -1077,26 +1111,33 @@
       transition: background var(--fs-motion-fast) var(--fs-ease-out);
     }
 
-    .home-action-row:last-child {
-      border-bottom: 0;
+    .home-action-row:last-child { border-right: 0; }
+
+    .home-action-row .tile-icon {
+      width: 32px;
+      height: 32px;
     }
+
+    .home-action-row .arrow-chip { display: none; }
 
     .home-action-row h3 {
       margin: 0;
-      font-size: 15px;
-      line-height: 22px;
+      font-size: 13px;
+      line-height: 20px;
       font-weight: 600;
     }
 
     .home-action-row p {
       margin: 2px 0 0;
       color: var(--fs-text-secondary);
-      font-size: 13px;
-      line-height: 20px;
+      font-size: 12px;
+      line-height: 18px;
     }
 
     .home-continue {
       padding: 18px;
+      box-shadow: none;
+      background: #FCFCFB;
     }
 
     .owner-todo {
@@ -3196,19 +3237,13 @@
 
     function renderHome() {
       return `
-        <div class="metric-strip" data-screen-label="v2-首页-顶部状态栏">
-          <button class="metric-pill" type="button" data-screen="docs"><span>最近文档</span><strong>12</strong></button>
-          <button class="metric-pill" type="button" data-doc-tab-jump="unlinked"><span>待关联知识库</span><strong>8</strong></button>
-          <button class="metric-pill" type="button" data-screen="knowledge"><span>可问答知识库</span><strong>31</strong></button>
-          <button class="metric-pill" type="button" data-action-panel="trustExplain"><span>保密过滤</span><strong>可解释</strong></button>
-        </div>
-
         <div class="home-workbench" data-screen-label="v3-首页-AI工作台">
           <div class="home-primary">
             <section class="card home-ai-window" aria-label="首页 AI 问答窗口">
               <div class="home-ai-copy">
-                <h2>问 AI，基于你的知识库</h2>
-                <p>系统会先推荐最可信的知识范围，回答展示引用、权限状态和过滤记录，结论可一键沉淀到文档或知识库。</p>
+                <span class="home-ai-eyebrow">企业知识问答</span>
+                <h2>今天想解决什么工作问题？</h2>
+                <p>直接提问，AI 会从你有权限的 31 个知识库和最近文档中查找答案，并标注来源。</p>
               </div>
               <div class="home-ai-compose">
                 <div class="home-kb-picker">
@@ -3226,8 +3261,8 @@
                     </div>
                   ` : ""}
                 </div>
-                <button class="home-ai-input" type="button" data-ai-assistant="home" data-ai-prompt="帮我根据本季度周报起草一份部门汇报">例如：帮我根据本季度周报起草一份部门汇报...</button>
-                <button class="home-ai-send" type="button" data-ai-assistant="home" data-ai-prompt="帮我根据本季度周报起草一份部门汇报" aria-label="发送首页问题">${icon("send")}</button>
+                <button class="home-ai-input" type="button" data-ai-assistant="home" data-ai-prompt="6 月 AI 工具订阅报销需要哪些凭证？">例如：6 月 AI 工具订阅报销需要哪些凭证？</button>
+                <button class="home-ai-send" type="button" data-ai-assistant="home" data-ai-prompt="6 月 AI 工具订阅报销需要哪些凭证？" aria-label="发送首页问题">${icon("send")}</button>
               </div>
               <div class="trust-brief" aria-label="可信问答说明">
                 <button class="trust-brief-item" type="button" data-action-panel="scopeExplain">
@@ -3244,43 +3279,30 @@
                 </button>
               </div>
               <div class="home-ai-presets">
-                <button class="pill" type="button" data-ai-assistant="home" data-ai-prompt="把最近会议纪要整理成待办">会议纪要</button>
-                <button class="pill" type="button" data-ai-assistant="home" data-ai-prompt="根据知识库生成 PPT 提纲">PPT 提纲</button>
-                <button class="pill" type="button" data-ai-assistant="home" data-ai-prompt="审阅最近文档里的保密风险">风险审阅</button>
-                <button class="pill" type="button" data-ai-assistant="home" data-ai-prompt="把最近三篇项目文档生成周报">周报生成</button>
+                <button class="pill" type="button" data-ai-assistant="home" data-ai-prompt="AI 工具订阅报销需要哪些凭证？">查报销规则</button>
+                <button class="pill" type="button" data-ai-assistant="home" data-ai-prompt="总结本周项目进展和风险">问项目进展</button>
+                <button class="pill" type="button" data-ai-assistant="home" data-ai-prompt="审阅最近文档里的保密风险">查合规风险</button>
+                <button class="pill" type="button" data-ai-assistant="home" data-ai-prompt="帮新员工整理项目必读知识">新人快速了解项目</button>
               </div>
             </section>
 
             <section class="card home-action-list" aria-label="常用开始方式">
+              <div class="home-action-label">其他开始方式</div>
               <button class="home-action-row" type="button" data-screen="editor">
                 <span class="tile-icon">${icon("plus")}</span>
-                <div><h3>新建文档</h3><p>在线文档、表格、幻灯片，保存后自动推荐关联知识库。</p></div>
+                <div><h3>新建文档</h3><p>开始写作</p></div>
                 <span class="arrow-chip">${icon("arrow")}</span>
               </button>
               <button class="home-action-row" type="button" data-screen="knowledge">
                 <span class="tile-icon">${icon("kb")}</span>
-                <div><h3>创建知识库</h3><p>沉淀团队知识资产，设置权限后可直接问答。</p></div>
+                <div><h3>创建知识库</h3><p>组织团队知识</p></div>
                 <span class="arrow-chip">${icon("arrow")}</span>
               </button>
               <button class="home-action-row" type="button" data-screen="drive">
                 <span class="tile-icon">${icon("folder")}</span>
-                <div><h3>从云盘入库</h3><p>把文件夹和资料包转成可检索、可问答的知识。</p></div>
+                <div><h3>从云盘入库</h3><p>沉淀历史资料</p></div>
                 <span class="arrow-chip">${icon("arrow")}</span>
               </button>
-            </section>
-
-            <section class="card home-tools">
-              <div class="section-title">
-                <div><h2>高频入口</h2><p>只保留最常用的 4 个动作，其余能力进入知识工具。</p></div>
-              </div>
-              <div class="home-tools-grid">
-                ${tools.slice(0, 4).map(([title, desc, iconName]) => `
-                  <button class="home-tool-tile" type="button" data-ai-assistant="home" data-ai-prompt="${title}">
-                    <span class="tile-icon">${icon(iconName)}</span>
-                    <div><h3>${title}</h3><p>${desc}</p></div>
-                  </button>
-                `).join("")}
-              </div>
             </section>
           </div>
 
