@@ -1,0 +1,6 @@
+.git
+.vercel
+.nojekyll
+README.md
+*.test.js
+*.png
