@@ -6,7 +6,8 @@
 
 - GitHub Pages: https://huybio9566.github.io/tuitui/
 - 当前发布入口: `index.html`
-- 当前设计源文件: `designs/tuichat-cloud-docs-redesign/Cloud Docs Redesign v4 Autoplan.html`
+- 当前设计源文件: `designs/tuichat-cloud-docs-redesign/Cloud Docs Redesign v5 AI Modes.html`
+- 连接器与专家图像资源: `assets/catalog/`
 
 ## 项目结构
 
